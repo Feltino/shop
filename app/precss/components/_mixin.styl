@@ -1,0 +1,79 @@
+/////////////////////////////////////////////////////////////
+// @font-face
+// Usage: webfont('Crimson-Text-Roman', 'crimson-text', 'crimsontext-roman-webfont', true, normal, normal)
+// Generator: http://transfonter.org/
+/////////////////////////////////////////////////////////////
+
+webfont(family, file, hack-chrome-windows = false, weight = normal, style = normal)
+  @font-face
+    font-family family
+    src url('../fonts/' + file + '.eot')
+    src url('../fonts/' + file + '.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/' + file + '.woff2') format('woff2'),
+    url('../fonts/' + file + '.woff') format('woff'),
+    url('../fonts/' + file + '.ttf') format('truetype'),
+    url('../fonts/' + file + '.svg#'+ family) format('svg')
+    font-weight weight
+    font-style style
+      if hack-chrome-windows
+        @media screen and (-webkit-min-device-pixel-ratio:0)
+          @font-face
+            font-family family
+            src url('../fonts/' + file + '.svg#'+ family) format('svg')
+
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}
+
+
+llg-m()
+  @media only screen and (max-width: 12000px)
+    {block}
+lg-m()
+ @media only screen and (max-width: 1200px)
+   {block}
+md-m()
+  @media only screen and (max-width: 992px)
+    {block}
+sm-m()
+  @media only screen and (max-width: 768px)
+    {block}
+xs-m()
+  @media only screen and (max-width: 480px)
+    {block}
+xxs-m()
+  @media only screen and (max-width: 360px)
+    {block}
+xx-m()
+  @media only screen and (max-width: 375px)
+    {block}
+ps-m()
+  @media only screen and (max-width: 320px)
+    {block}
+
+
+
+xl-s()
+  @media only screen and (max-width: 1140px)
+    {block}
+lg-s()
+  @media only screen and (max-width: 960px)
+    {block}
+md-s()
+  @media only screen and (max-width: 720px)
+    {block}
+sm-s()
+  @media only screen and (max-width: 540px)
+    {block}
+
+
+
+
+
+
